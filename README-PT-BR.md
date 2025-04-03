@@ -330,12 +330,11 @@ Por padrão, o aplicativo será executado em `http://localhost:8000/dashboard`. 
 
 A [Documentação do Marzban](https://gozargah.github.io/marzban) fornece todos os guias essenciais para você começar, disponível em três idiomas: Farsi, Inglês e Russo. Essa documentação é continuamente atualizada para fornecer a você os guias mais recentes.
 
+---
+
 # API
 
-Marzban fornece uma API REST que permite aos desenvolvedores interagir programaticamente com os serviços do Marzban. Para visualizar a documentação da API no Swagger UI ou ReDoc, defina a variável de configuração `DOCS=[...]
-
-Claro, aqui está a tradução do trecho solicitado:
-
+O Marzban fornece uma API REST que permite aos desenvolvedores interagir programaticamente com os serviços do Marzban. Para visualizar a documentação da API no Swagger UI ou ReDoc, defina a variável de configuração `DOCS=True` e navegue até `/docs` e `/redoc`.
 ---
 
 # Backup
