@@ -334,9 +334,32 @@ A [Documentação do Marzban](https://gozargah.github.io/marzban) fornece todos 
 
 Marzban fornece uma API REST que permite aos desenvolvedores interagir programaticamente com os serviços do Marzban. Para visualizar a documentação da API no Swagger UI ou ReDoc, defina a variável de configuração `DOCS=[...]
 
+Claro, aqui está a tradução do trecho solicitado:
+
+---
+
 # Backup
 
-É sempre uma boa ideia fazer backup dos seus arquivos do Marzban regularmente para evitar perda de dados em caso de falhas no sistema ou exclusão acidental. Aqui estão os passos para fazer backup do Marzban:
+É sempre uma boa ideia fazer backup dos seus arquivos do Marzban regularmente para evitar a perda de dados em caso de falhas do sistema ou exclusão acidental. Aqui estão os passos para fazer backup do Marzban:
 
-1. Por padrão, todos os arquivos importantes do Marzban são salvos em `/var/lib/marzban` (versões Docker). Copie todo o diretório `/var/lib/marzban` para um local de backup de sua escolha, como um disco externo.
-2. Além disso, certifique-se de fazer backup do seu arquivo .env, que contém suas variáveis de configuração, e também do seu arquivo de configuração do Xray. Se você instal
+1. Por padrão, todos os arquivos importantes do Marzban são salvos em `/var/lib/marzban` (versões Docker). Copie todo o diretório `/var/lib/marzban` para um local de backup de sua escolha, como um disco rígido externo ou armazenamento em nuvem.
+2. Além disso, certifique-se de fazer backup do seu arquivo env, que contém suas variáveis de configuração, e também do seu arquivo de configuração do Xray. Se você instalou o Marzban usando marzban-scripts (abordagem de instalação recomendada), o arquivo env e outras configurações devem estar dentro do diretório `/opt/marzban/`.
+
+O serviço de backup do Marzban compacta eficientemente todos os arquivos necessários e os envia para o bot do Telegram especificado. Ele suporta bancos de dados SQLite, MySQL e MariaDB. Uma de suas principais características é a automação, permitindo que você agende backups a cada hora. Não há limitações em relação aos limites de upload do Telegram para bots; se um arquivo exceder o limite, ele será dividido e enviado em várias partes. Além disso, você pode iniciar um backup imediato a qualquer momento.
+
+Instale a Versão Mais Recente do Script do Marzban:
+```bash
+sudo bash -c "$(curl -sL https://github.com/Gozargah/Marzban-scripts/raw/master/marzban.sh)" @ install-script
+```
+
+Configurar o Serviço de Backup:
+```bash
+marzban backup-service
+```
+
+Obter um Backup Imediato:
+```bash
+marzban backup
+```
+
+Seguindo esses passos, você pode garantir que tem um backup de todos os seus arquivos e dados do Marzban, bem como suas variáveis de configuração e configuração do Xray, caso precise restaurá-los no futuro. Lembre-se de atualizar seus backups regularmente para mantê-los atualizados.
