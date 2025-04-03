@@ -112,6 +112,7 @@ Execute o comando a seguir para instalar o Marzban com banco de dados SQLite:
 
 ```bash
 sudo bash -c "$(curl -sL https://github.com/Gozargah/Marzban-scripts/raw/master/marzban.sh)" @ install
+```
 
 Execute o comando a seguir para instalar o Marzban com banco de dados MySQL:
 
